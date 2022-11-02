@@ -1,8 +1,10 @@
 package ModelDominio;
 
 public class Coordenador extends Usuario{
-    public Coordenador(String nome, String email, String senha) {
+    private Salas salas;
+    public Coordenador(String nome, String email, String senha, Salas salas) {
         super(nome, email, senha);
+        this.salas = salas;
     }
     public void logar(String email, String senha){
         System.out.println("Login realizado com sucesso!");
@@ -13,11 +15,11 @@ public class Coordenador extends Usuario{
     public void autenticar(){
 
     }
-    public void cadastrarSalas(String nome, String predio, String andar, String localizacao){
-        //verificar se este método não tem que estar na classe Salas
+    public void cadastrarSalas(Salas nome, Salas predio, String andar, Salas localizacao){
+
     }
-    public void listarSalas(String nome, String predio, String andar, String localizacao){
-        //verificar se este método não tem que estar na classe Salas
+    public void listarSalas(Salas nome, Salas predio, Salas andar, Salas localizacao){
+
     }
     public void inserirDataeHora(){
 
