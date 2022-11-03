@@ -23,7 +23,4 @@ public class Agendador extends Usuario{
     public String pesquisarDisponibilidade(String status){
         return status;
     }
-    public void criarAgendamento(String sala, String dataHoraInicio, String dataHoraFim){
-
-    }
 }
