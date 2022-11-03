@@ -3,6 +3,8 @@ package ModelDominio;
 import java.util.Date;
 
 public class Agendamento {
+    private Periodo periodo;
+    private Salas salas;
     private String periodoAgendado;
     private String status;
     private Date dataHoraRegistro;
@@ -11,7 +13,9 @@ public class Agendamento {
     private String observacoes;
 
     public Agendamento(Salas salas, Date dataHoraEntregue, Date dataHoraPego){
-
+        this.setSalas(salas);
+        this.setDataHoraEntregue(dataHoraEntregue);
+        this.setDataHoraPego(dataHoraPego);
     }
     public String getPeriodoAgendado(){
         return periodoAgendado;
@@ -59,5 +63,12 @@ public class Agendamento {
 
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
+    }
+    public Salas getSalas(){
+        return salas;
+    }
+    public Salas setSalas(Salas salas){
+        this.salas = salas;
+        return salas;
     }
 }

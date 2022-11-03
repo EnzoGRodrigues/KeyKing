@@ -4,10 +4,10 @@ public class Administrador extends Usuario{
     public Administrador(String nome, String email, String senha){
         super (nome, email, senha);
     }
-    public void logar(String email, String senha){
+    public void login(String email, String senha){
         System.out.println("Login feito com sucesso!");
     }
-    public void deslogar(){
+    public void logout(){
         System.out.println("Logout realizado.");
 
     }

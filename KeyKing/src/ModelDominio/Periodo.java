@@ -6,6 +6,11 @@ public class Periodo {
     private Date dataHoraInicio;
     private Date dataHoraFim;
 
+    public Periodo(Date dataHoraInicio, Date dataHoraFim){
+        this.setDataHoraInicio(dataHoraInicio);
+        this.setDataHoraFim(dataHoraFim);
+    }
+
     public Date getDataHoraInicio(){
         return dataHoraInicio;
     }

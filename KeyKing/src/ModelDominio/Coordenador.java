@@ -2,14 +2,21 @@ package ModelDominio;
 
 public class Coordenador extends Usuario{
     private Salas salas;
-    public Coordenador(String nome, String email, String senha, Salas salas) {
+    private Agendamento agendamento;
+    public Coordenador(String nome, String email, String senha) {
         super(nome, email, senha);
-        this.salas = salas;
     }
-    public void logar(String email, String senha){
-        System.out.println("Login realizado com sucesso!");
+    public boolean login(String email, String senha){ // verificando login
+        boolean x = false;
+        if(this.getLogin().equals(email) && this.getSenha().equals(senha) == true){
+            x= true;
+        }
+        if(this.getSenha().equals(senha) == false){
+            x= false;
+        }
+        return x;
     }
-    public void deslogar(){
+    public void logout(){
         System.out.println("Logout realizado com sucesso!");
     }
     public void autenticar(){

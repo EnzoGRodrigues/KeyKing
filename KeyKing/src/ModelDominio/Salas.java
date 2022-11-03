@@ -6,6 +6,13 @@ public class Salas {
     private String andar;
     private String localizacao;
 
+    public Salas(String nome, String predio, String andar, String localizacao){
+        this.setNome(nome);
+        this.setPredio(predio);
+        this.setAndar(andar);
+        this.setLocalizacao(localizacao);
+    }
+
     public String getNome(){
         return nome;
     }

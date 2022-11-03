@@ -2,6 +2,9 @@ package ModelDominio;
 
 public class Usuario {
     public Usuario(String nome, String email, String senha){
+        this.setNome(nome);
+        this.setEmail(email);
+        this.setSenha(senha);
     }
     private String nome;
     private String email;
