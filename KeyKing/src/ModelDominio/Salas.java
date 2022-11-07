@@ -1,16 +1,18 @@
 package ModelDominio;
 
 public class Salas {
+    private Coordenador coordenador;
     private String nome;
     private String predio;
     private String andar;
     private String localizacao;
 
-    public Salas(String nome, String predio, String andar, String localizacao){
+    public Salas(String nome, String predio, String andar, String localizacao, Coordenador coordenador ){
         this.setNome(nome);
         this.setPredio(predio);
         this.setAndar(andar);
         this.setLocalizacao(localizacao);
+        this.setCoordenador(coordenador);
     }
 
     public String getNome(){
@@ -25,7 +27,9 @@ public class Salas {
     public String getLocalizacao(){
         return localizacao;
     }
-
+    public Coordenador getCoordenador() {
+        return coordenador;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -40,5 +44,9 @@ public class Salas {
 
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public void setCoordenador(Coordenador coordenador) {
+        this.coordenador = coordenador;
     }
 }

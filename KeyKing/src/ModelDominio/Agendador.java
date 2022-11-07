@@ -2,8 +2,8 @@ package ModelDominio;
 
 public class Agendador extends Usuario{
     private Agendamento agendamento;
-    public Agendador(String nome, String email, String senha) {
-        super(nome, email, senha);
+    public Agendador(String nome, String email, String senha, String login) {
+        super(nome, email, senha, login);
     }
     public void login(String usuario, String senha){
 

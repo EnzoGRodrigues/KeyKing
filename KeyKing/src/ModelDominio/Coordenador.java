@@ -3,8 +3,8 @@ package ModelDominio;
 public class Coordenador extends Usuario{
     private Salas salas;
     private Agendamento agendamento;
-    public Coordenador(String nome, String email, String senha) {
-        super(nome, email, senha);
+    public Coordenador(String nome, String email, String senha, String login) {
+        super(nome, email, senha, login);
     }
     public boolean login(String email, String senha){ // verificando login
         boolean x = false;
