@@ -3,8 +3,8 @@ package ModelDominio;
 import java.util.Date;
 
 public class Agendamento {
-    private Agendador agendador; //relacionamento um pra um com agendador
-    private Periodo periodo; //relacionaneto um pra um com periodo
+    private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
+    private Periodo periodo; //relacionaneto - obrigado ter um periodo no agendamento
     private Salas salas;
     private String status;
     private Date dataHoraRegistro;

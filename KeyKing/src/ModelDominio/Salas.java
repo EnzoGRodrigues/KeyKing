@@ -1,7 +1,7 @@
 package ModelDominio;
 
 public class Salas {
-    private Coordenador coordenador;
+    private Coordenador coordenador; //relacionamento - obrigatório ter um coordenador da sala
     private String nome;
     private String predio;
     private String andar;
