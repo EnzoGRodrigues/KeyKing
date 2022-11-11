@@ -1,37 +1,38 @@
 package ModelDominio;
 
-import java.util.Date;
+import java.time.LocalTime;
 
 public class Agendamento {
     private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
     private Periodo periodoAgendado; //relacionaneto - obrigado ter um periodo no agendamento
     private Sala sala;
     private String status;
-    private Date dataHoraRegistro;
-    private Date dataHoraPego;
-    private Date dataHoraEntregue;
+    private LocalTime dataHoraRegistro;
+    private LocalTime dataHoraPego;
+    private LocalTime dataHoraEntregue;
     private String observacoes;
 
-    public Agendamento(Sala sala, Date dataHoraEntregue, Date dataHoraPego, Agendador agendador, Periodo periodo){
+    public Agendamento(Sala sala,LocalTime dataHoraRegistro, LocalTime dataHoraEntregue, LocalTime dataHoraPego, Agendador agendador, Periodo periodo){
         this.setSala(sala);
         this.setDataHoraEntregue(dataHoraEntregue);
         this.setDataHoraPego(dataHoraPego);
         this.setAgendador(agendador);
         this.setPeriodoAgendado(periodo);
+        this.setDataHoraRegistro(dataHoraRegistro);
     }
     public String getStatus() {
         return status;
     }
 
-    public Date getDataHoraRegistro() {
+    public LocalTime getDataHoraRegistro() {
         return dataHoraRegistro;
     }
 
-    public Date getDataHoraPego() {
+    public LocalTime getDataHoraPego() {
         return dataHoraPego;
     }
 
-    public Date getDataHoraEntregue() {
+    public LocalTime getDataHoraEntregue() {
         return dataHoraEntregue;
     }
 
@@ -53,15 +54,15 @@ public class Agendamento {
         this.status = status;
     }
 
-    public void setDataHoraEntregue(Date dataHoraEntregue) {
+    public void setDataHoraEntregue(LocalTime dataHoraEntregue) {
         this.dataHoraEntregue = dataHoraEntregue;
     }
 
-    public void setDataHoraPego(Date dataHoraPego) {
+    public void setDataHoraPego(LocalTime dataHoraPego) {
         this.dataHoraPego = dataHoraPego;
     }
 
-    public void setDataHoraRegistro(Date dataHoraRegistro) {
+    public void setDataHoraRegistro(LocalTime dataHoraRegistro) {
         this.dataHoraRegistro = dataHoraRegistro;
     }
 

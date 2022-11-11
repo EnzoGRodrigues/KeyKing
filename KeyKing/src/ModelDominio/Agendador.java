@@ -1,6 +1,6 @@
 package ModelDominio;
 
-import java.util.Date;
+import java.time.LocalTime;
 import java.util.List;
 
 public class Agendador extends Usuario{
@@ -27,7 +27,7 @@ public class Agendador extends Usuario{
     public String pesquisarDisponibilidade(String status){
         return status;
     }
-    public void criarAgendamentos(Sala sala, Date dataHoraInicial, Date dataHoraFinal){
+    public void criarAgendamentos(Sala sala, LocalTime dataHoraInicial, LocalTime dataHoraFinal){
 
     }
     public List<Agendamento>agendamentos(){ //getAgendamentos

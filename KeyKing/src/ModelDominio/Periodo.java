@@ -1,31 +1,31 @@
 package ModelDominio;
 
-import java.util.Date;
+import java.time.LocalTime;
 
 public class Periodo {
     private Agendamento agendamento; //relacionamento - obrigado ter um agendamento para o periodo
-    private Date dataHoraInicio;
-    private Date dataHoraFim;
+    private LocalTime dataHoraInicio;
+    private LocalTime dataHoraFim;
 
-    public Periodo(Date dataHoraInicio, Date dataHoraFim, Agendamento agendamento){
+    public Periodo(LocalTime dataHoraInicio, LocalTime dataHoraFim, Agendamento agendamento){
         this.setDataHoraInicio(dataHoraInicio);
         this.setDataHoraFim(dataHoraFim);
         this.setAgendamento(agendamento);
     }
 
-    public Date getDataHoraInicio(){
+    public LocalTime getDataHoraInicio(){
         return dataHoraInicio;
     }
 
-    public Date getDataHoraFim() {
+    public LocalTime getDataHoraFim() {
         return dataHoraFim;
     }
 
-    public void setDataHoraInicio(Date dataHoraInicio) {
+    public void setDataHoraInicio(LocalTime dataHoraInicio) {
         this.dataHoraInicio = dataHoraInicio;
     }
 
-    public void setDataHoraFim(Date dataHoraFim) {
+    public void setDataHoraFim(LocalTime dataHoraFim) {
         this.dataHoraFim = dataHoraFim;
     }
 
