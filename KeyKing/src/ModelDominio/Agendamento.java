@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class Agendamento {
     private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
-    private Periodo periodo; //relacionaneto - obrigado ter um periodo no agendamento
-    private Salas salas;
+    private Periodo periodoAgendado; //relacionaneto - obrigado ter um periodo no agendamento
+    private Sala sala;
     private String status;
     private Date dataHoraRegistro;
     private Date dataHoraPego;
     private Date dataHoraEntregue;
     private String observacoes;
 
-    public Agendamento(Salas salas, Date dataHoraEntregue, Date dataHoraPego, Agendador agendador, Periodo periodo){
-        this.setSalas(salas);
+    public Agendamento(Sala sala, Date dataHoraEntregue, Date dataHoraPego, Agendador agendador, Periodo periodo){
+        this.setSala(sala);
         this.setDataHoraEntregue(dataHoraEntregue);
         this.setDataHoraPego(dataHoraPego);
         this.setAgendador(agendador);
-        this.setPeriodo(periodo);
+        this.setPeriodoAgendado(periodo);
     }
     public String getStatus() {
         return status;
@@ -43,11 +43,11 @@ public class Agendamento {
         return agendador;
     }
 
-    public Periodo getPeriodo() {
-        return periodo;
+    public Periodo getPeriodoAgendado() {
+        return periodoAgendado;
     }
-    public Salas getSalas(){
-        return salas;
+    public Sala getSala(){
+        return sala;
     }
     public void setStatus(String status) {
         this.status = status;
@@ -68,14 +68,15 @@ public class Agendamento {
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
     }
-    public Salas setSalas(Salas salas){
-        this.salas = salas;
-        return salas;
+    public Sala setSala(Sala sala){
+        this.sala = sala;
+        return sala;
     }
     public void setAgendador(Agendador agendador) {
         this.agendador = agendador;
     }
-    public void setPeriodo(Periodo periodo) {
-        this.periodo = periodo;
+    public void setPeriodoAgendado(Periodo periodoAgendado) {
+        this.periodoAgendado = periodoAgendado;
     }
+
 }

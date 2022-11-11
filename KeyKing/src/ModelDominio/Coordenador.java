@@ -1,8 +1,10 @@
 package ModelDominio;
 
+import java.util.List;
+
 public class Coordenador extends Usuario{
-    private Salas salas;
-    private Agendamento agendamento;
+    private Sala sala;
+    private List<Sala> salas;
     public Coordenador(String nome, String email, String senha, String login) {
         super(nome, email, senha, login);
     }
@@ -22,16 +24,19 @@ public class Coordenador extends Usuario{
     public void autenticar(){
 
     }
-    public void cadastrarSalas(Salas nome, Salas predio, String andar, Salas localizacao){
+    public void cadastrarSalas(Sala nome, Sala predio, String andar, Sala localizacao){
 
     }
-    public void listarSalas(Salas nome, Salas predio, Salas andar, Salas localizacao){
-
-    }
+   public List<Sala>salas(){
+        return salas;
+   }
     public void inserirDataeHora(){
 
     }
     public void aprovaAgendamento(Agendamento a){
-        //criar classe agendamento para conseguir passar o parâmetro
+
+    }
+    public void reprovaAgendamento(Agendamento a){
+
     }
 }

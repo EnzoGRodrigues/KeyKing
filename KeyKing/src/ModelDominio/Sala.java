@@ -1,13 +1,13 @@
 package ModelDominio;
 
-public class Salas {
+public class Sala {
     private Coordenador coordenador; //relacionamento - obrigatório ter um coordenador da sala
     private String nome;
     private String predio;
     private String andar;
     private String localizacao;
 
-    public Salas(String nome, String predio, String andar, String localizacao, Coordenador coordenador ){
+    public Sala(String nome, String predio, String andar, String localizacao, Coordenador coordenador ){
         this.setNome(nome);
         this.setPredio(predio);
         this.setAndar(andar);
