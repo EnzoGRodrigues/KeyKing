@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Coordenador extends Usuario{
     private Sala sala;
-    private List<Sala> salas;
     public Coordenador(String nome, String email, String senha, String login) {
         super(nome, email, senha, login);
     }
@@ -27,9 +26,6 @@ public class Coordenador extends Usuario{
     public void cadastrarSalas(Sala nome, Sala predio, String andar, Sala localizacao){
 
     }
-   public List<Sala>salas(){
-        return salas;
-   }
     public void inserirDataeHora(){
 
     }

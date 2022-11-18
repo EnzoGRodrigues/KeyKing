@@ -1,18 +1,20 @@
 package ModelDominio;
 
+import java.text.DateFormat;
 import java.time.LocalTime;
+import java.util.Date;
 
 public class Agendamento {
     private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
     private Periodo periodoAgendado; //relacionaneto - obrigado ter um periodo no agendamento
     private Sala sala;
     private String status;
-    private LocalTime dataHoraRegistro;
-    private LocalTime dataHoraPego;
-    private LocalTime dataHoraEntregue;
+    private DateFormat dataHoraRegistro;
+    private DateFormat dataHoraPego;
+    private DateFormat dataHoraEntregue;
     private String observacoes;
 
-    public Agendamento(Sala sala,LocalTime dataHoraRegistro, LocalTime dataHoraEntregue, LocalTime dataHoraPego, Agendador agendador, Periodo periodo){
+    public Agendamento(Sala sala,DateFormat dataHoraRegistro, DateFormat dataHoraEntregue, DateFormat dataHoraPego, Agendador agendador, Periodo periodo){
         this.setSala(sala);
         this.setDataHoraEntregue(dataHoraEntregue);
         this.setDataHoraPego(dataHoraPego);
@@ -24,15 +26,15 @@ public class Agendamento {
         return status;
     }
 
-    public LocalTime getDataHoraRegistro() {
+    public DateFormat getDataHoraRegistro() {
         return dataHoraRegistro;
     }
 
-    public LocalTime getDataHoraPego() {
+    public DateFormat getDataHoraPego() {
         return dataHoraPego;
     }
 
-    public LocalTime getDataHoraEntregue() {
+    public DateFormat getDataHoraEntregue() {
         return dataHoraEntregue;
     }
 
@@ -54,15 +56,15 @@ public class Agendamento {
         this.status = status;
     }
 
-    public void setDataHoraEntregue(LocalTime dataHoraEntregue) {
+    public void setDataHoraEntregue(DateFormat dataHoraEntregue) {
         this.dataHoraEntregue = dataHoraEntregue;
     }
 
-    public void setDataHoraPego(LocalTime dataHoraPego) {
+    public void setDataHoraPego(DateFormat dataHoraPego) {
         this.dataHoraPego = dataHoraPego;
     }
 
-    public void setDataHoraRegistro(LocalTime dataHoraRegistro) {
+    public void setDataHoraRegistro(DateFormat dataHoraRegistro) {
         this.dataHoraRegistro = dataHoraRegistro;
     }
 

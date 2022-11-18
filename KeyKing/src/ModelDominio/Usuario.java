@@ -29,13 +29,28 @@ public class Usuario {
     }
 
     public void setNome(String nome) {
+        if (nome == null){
+            throw new RuntimeException("Nome null.");
+        }
+        if (nome.length()<= 3){
+            throw new RuntimeException("Nome com menos de 2 caracteres.");
+        }
         this.nome = nome;
     }
 
     public void setEmail(String email) {
+        if (email == null){
+            throw new RuntimeException("Email null.");
+        }
         this.email = email;
     }
     public void setSenha(String senha){
+        if (nome == null){
+            throw new RuntimeException("Senha null.");
+        }
+        if (nome.length()<= 8){
+            throw new RuntimeException("Senha com menos de 7 caracteres.");
+        }
         this.senha = senha;
     }
 
