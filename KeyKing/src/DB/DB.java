@@ -11,34 +11,34 @@ import java.util.List;
 public class DB {
 
     public static List<Coordenador> coordenador = new ArrayList<Coordenador>();
-    public static List<Administrador> administrador = new ArrayList<>();
+    public static List<Administrador> administrador = new ArrayList<Administrador>();
     public static List<Sala> salas = new ArrayList<Sala>();
     public static List<Periodo> periodo = new ArrayList<Periodo>();
     public static List<Agendamento> agendamento = new ArrayList<Agendamento>();
-    public static List<Agendador> agendador = new ArrayList<>();
+    public static List<Agendador> agendador = new ArrayList<Agendador>();
 
 
     public static void criaAdministrador(){
         Administrador adm;
-        adm = new Administrador("Sam","sam@teste.com","spn","1");
+        adm = new Administrador("Sam","123","spnsam@teste.com");
         administrador.add(adm);
-        adm = new Administrador("Gabriel","gabriel@teste.com","abc","2");
+        adm = new Administrador("Gabriel","456","abcgabriel@teste.com");
         administrador.add(adm);
-        adm = new Administrador("Ezequiel","ezequiel@teste.com","god","3");
+        adm = new Administrador("Ezequiel","789","godezequiel@teste.com");
         administrador.add(adm);
     }
     public static void criaCoordenador(){
         //cadastro dos coordenadores
         Coordenador c;
-        c = new Coordenador("Lucas","lucas@teste.com", "123","1");
+        c = new Coordenador("Lucas","111", "12ucas@teste.com");
         coordenador.add(c);
-        c = new Coordenador("Joao","joao@teste.com", "456","2");
+        c = new Coordenador("Joao","112", "456oao@teste.com");
         coordenador.add(c);
-        c = new Coordenador("Pedro","pedro@teste.com", "789","3");
+        c = new Coordenador("Pedro","113", "78pedro@teste.com");
         coordenador.add(c);
-        c = new Coordenador("Marcos","marcos@teste.com", "100","4");
+        c = new Coordenador("Marcos","114", "100marcos@teste.com");
         coordenador.add(c);
-        c = new Coordenador("Mateus","mateus@teste.com", "111","5");
+        c = new Coordenador("Mateus","115", "111mateus@teste.com");
         coordenador.add(c);
     }
     public static void criaSalas(){
@@ -72,15 +72,15 @@ public class DB {
     }
     public static void criarAgendador(){
         Agendador usuario;
-        usuario = new Agendador("Enzo","enzo@gmail.com","123","1");
+        usuario = new Agendador("Enzo","222","123enzo@gmail.com");
         agendador.add(usuario);
-        usuario = new Agendador("Paulo","paulo@gmail.com","456","2");
+        usuario = new Agendador("Paulo","223","456paulo@gmail.com");
         agendador.add(usuario);
-        usuario = new Agendador("Tiago","tiago@gmail.com","789","3");
+        usuario = new Agendador("Tiago","224","789tiago@gmail.com");
         agendador.add(usuario);
-        usuario = new Agendador("Jose","jose@gmail.com","111","4");
+        usuario = new Agendador("Jose","225","111jose@gmail.com");
         agendador.add(usuario);
-        usuario = new Agendador("Estevao","estevao@gmail.com","100","5");
+        usuario = new Agendador("Estevao","226","100estevao@gmail.com");
         agendador.add(usuario);
     }
     public static void criaAgendamentos(){
