@@ -1,6 +1,6 @@
 package ModelDominio;
 
-import java.time.LocalTime;
+import java.text.DateFormat;
 
 public class Agendador extends Usuario {
     private Agendamento agendamento;
@@ -18,13 +18,20 @@ public class Agendador extends Usuario {
         return x;
     }
     public void editarPerfil(String login, String senha) {
+        if(this.getLogin() == null && this.getSenha() == null){
+            throw new RuntimeException("Login e senha não podem ser nulos");
+        }else if (this.getLogin() == null || this.getSenha() == null){
+            throw new RuntimeException("Login ou senha não podem ser nulos");
+        }else{
+            this.getLogin();
+            this.getSenha();
+        }
 
     }
     public void logout() {
 
     }
     public void autenticar() {
-
     }
     public void agendarDataeHora() {
 
@@ -33,7 +40,7 @@ public class Agendador extends Usuario {
 
         return status;
     }
-    public void criarAgendamentos(Sala sala, LocalTime dataHoraInicial, LocalTime dataHoraFinal) {
+    public void criarAgendamentos(Sala sala, DateFormat dataHoraInicial, DateFormat dataHoraFinal) {
 
     }
 }

@@ -2,17 +2,20 @@ package ModelDominio;
 
 import java.text.DateFormat;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Agendamento {
     private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
     private Periodo periodoAgendado; //relacionaneto - obrigado ter um periodo no agendamento
     private Sala sala;
-    private String status;
+    private Status status;
     private DateFormat dataHoraRegistro;
     private DateFormat dataHoraPego;
     private DateFormat dataHoraEntregue;
     private String observacoes;
+    private ArrayList<Agendamento> agendamentos;
 
     public Agendamento(Sala sala,DateFormat dataHoraRegistro, DateFormat dataHoraEntregue, DateFormat dataHoraPego, Agendador agendador, Periodo periodo){
         this.setSala(sala);
@@ -22,7 +25,7 @@ public class Agendamento {
         this.setPeriodoAgendado(periodo);
         this.setDataHoraRegistro(dataHoraRegistro);
     }
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -52,7 +55,7 @@ public class Agendamento {
     public Sala getSala(){
         return sala;
     }
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

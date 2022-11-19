@@ -1,11 +1,13 @@
 package ModelDominio;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Coordenador extends Usuario{
     private Sala sala;
+    ArrayList<Sala>ListSalas;
     public Coordenador(String nome, String senha, String login) {
         super(nome, senha, login);
+        ListSalas = new ArrayList<>();
     }
     public boolean login(String login, String senha){ // verificando login
         boolean x = false;
@@ -23,16 +25,16 @@ public class Coordenador extends Usuario{
     public void autenticar(){
 
     }
-    public void cadastrarSalas(Sala nome, Sala predio, String andar, Sala localizacao){
-
+    public void cadastrarSalas(Sala s){
+        ListSalas.add(s);
     }
-    public void inserirDataeHora(){
-
+    public void aprovaAgendamento(Agendamento agendamento){
+        Agendamento teste = agendamento;
+        teste.setStatus(Status.APROVADO);
     }
-    public void aprovaAgendamento(Agendamento a){
-
+    public void reprovaAgendamento(Agendamento agendamento){
+        Agendamento teste = agendamento;
+        teste.setStatus(Status.REPROVADO);
     }
-    public void reprovaAgendamento(Agendamento a){
 
-    }
 }
