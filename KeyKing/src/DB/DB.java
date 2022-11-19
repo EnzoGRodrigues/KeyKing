@@ -20,25 +20,25 @@ public class DB {
 
     public static void criaAdministrador(){
         Administrador adm;
-        adm = new Administrador("Sam","123","sam_spn");
+        adm = new Administrador("Sam","123","sam_spn", true);
         administrador.add(adm);
-        adm = new Administrador("Gabriel","456","gabriel_ang");
+        adm = new Administrador("Gabriel","456","gabriel_ang", true);
         administrador.add(adm);
-        adm = new Administrador("Ezequiel","789","ezequiel_ea");
+        adm = new Administrador("Ezequiel","789","ezequiel_ea", true);
         administrador.add(adm);
     }
     public static void criaCoordenador(){
         //cadastro dos coordenadores
         Coordenador c;
-        c = new Coordenador("Lucas","111", "lucas_12");
+        c = new Coordenador("Lucas","111", "lucas_12", true);
         coordenador.add(c);
-        c = new Coordenador("Joao","112", "joao_beto");
+        c = new Coordenador("Joao","112", "joao_beto", true);
         coordenador.add(c);
-        c = new Coordenador("Pedro","113", "pedro_33");
+        c = new Coordenador("Pedro","113", "pedro_33", true);
         coordenador.add(c);
-        c = new Coordenador("Marcos","114", "marcos_aba");
+        c = new Coordenador("Marcos","114", "marcos_aba", true);
         coordenador.add(c);
-        c = new Coordenador("Mateus","115", "mateus_22");
+        c = new Coordenador("Mateus","115", "mateus_22", true);
         coordenador.add(c);
     }
     public static void criaSalas(){
@@ -72,15 +72,15 @@ public class DB {
     }
     public static void criarAgendador(){
         Agendador usuario;
-        usuario = new Agendador("Enzo","222","enzo_gabriel");
+        usuario = new Agendador("Enzo","222","enzo_gabriel", true);
         agendador.add(usuario);
-        usuario = new Agendador("Paulo","223","paulo_roberto");
+        usuario = new Agendador("Paulo","223","paulo_roberto", true);
         agendador.add(usuario);
-        usuario = new Agendador("Tiago","224","tiago_soares");
+        usuario = new Agendador("Tiago","224","tiago_soares", true);
         agendador.add(usuario);
-        usuario = new Agendador("Jose","225","jose_silva");
+        usuario = new Agendador("Jose","225","jose_silva", true);
         agendador.add(usuario);
-        usuario = new Agendador("Estevao","226","estevao_rodrigues");
+        usuario = new Agendador("Estevao","226","estevao_rodrigues", true);
         agendador.add(usuario);
     }
     public static void criaAgendamentos(){
