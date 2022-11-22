@@ -1,11 +1,14 @@
 package ModelDominio;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 
 public class Agendador extends Usuario {
     private Agendamento agendamento;
+    ArrayList<Agendamento> agendamentos;
     public Agendador(String nome, String senha, String login, boolean statusUsuario) {
         super(nome, senha, login, statusUsuario);
+        agendamentos = new ArrayList<>();
     }
     public boolean login(String login, String senha){ // verificando login
         boolean x = false;
@@ -36,7 +39,10 @@ public class Agendador extends Usuario {
 
         return status;
     }
-    public void criarAgendamentos(Sala sala, DateFormat dataHoraInicial, DateFormat dataHoraFinal) {
-
+    public void criarAgendamentos(Agendamento a) {
+        agendamentos.add(a);
+        /*this.setSala(sala);
+        this.setdataHoraInicial(dataHoraInicial);
+        this.setdataHoraFinal(dataHoraFinal);*/
     }
 }
