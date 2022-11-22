@@ -29,7 +29,4 @@ public class Administrador extends Usuario{
         this.setSenha(senha);
         this.setLogin(login);*/
     }
-    public void autenticar(){
-
-    }
 }

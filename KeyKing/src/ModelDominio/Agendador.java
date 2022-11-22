@@ -32,11 +32,6 @@ public class Agendador extends Usuario {
     public void logout() {
 
     }
-    public void autenticar() {
-    }
-    public void agendarDataeHora() {
-
-    }
     public String pesquisarDisponibilidade(String status) {
 
         return status;

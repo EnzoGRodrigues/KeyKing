@@ -23,9 +23,6 @@ public class Coordenador extends Usuario{
     public void logout(){
         System.out.println("Logout realizado com sucesso!");
     }
-    public void autenticar(){
-
-    }
     public void cadastrarSalas(Sala s){
         ListSalas.add(s); //adiciona uma sala criada na lista
     }

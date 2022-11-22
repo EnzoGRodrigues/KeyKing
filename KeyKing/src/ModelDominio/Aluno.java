@@ -21,7 +21,4 @@ public class Aluno extends Agendador{
     public void logout(){
 
     }
-    public void autenticar(){
-
-    }
 }
