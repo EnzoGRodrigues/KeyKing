@@ -1,13 +1,14 @@
 package ModelDominio;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Coordenador extends Usuario{
     private Sala sala;
-    ArrayList<Sala>ListSalas;
+    private List<Sala>ListSalas;
     public Coordenador(String nome, String senha, String login, boolean statusUsuario) {
         super(nome, senha, login, statusUsuario);
-        ListSalas = new ArrayList<>();
+        ListSalas = new ArrayList<Sala>();
     }
     public boolean login(String login, String senha){
         boolean x = false;

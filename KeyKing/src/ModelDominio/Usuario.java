@@ -35,17 +35,17 @@ public class Usuario {
         if (nome == null){ //testa se o nome é null.
             throw new RuntimeException("Nome null.");
         }
-        if (nome.length()<= 3){ //testa se o nome tem menos de 2 caracteres
-            throw new RuntimeException("Nome com menos de 2 caracteres.");
+        if (nome.length()< 3){ //testa se o nome tem menos de 2 caracteres
+            throw new RuntimeException("Nome com menos de 3 caracteres.");
         }
         this.nome = nome;
     }
     public void setSenha(String senha){
-        if (nome == null){//testa se o senha é null.
+        if (senha == null){ //testa se o nome é null.
             throw new RuntimeException("Senha null.");
         }
-        if (nome.length()<= 8){//testa se a senha tem menos de 7 caracteres
-            throw new RuntimeException("Senha com menos de 7 caracteres.");
+        if (senha.length()< 2){ //testa se o nome tem menos de 2 caracteres
+            throw new RuntimeException("Senha com menos de 2 caracteres.");
         }
         this.senha = senha;
     }

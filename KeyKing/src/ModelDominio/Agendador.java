@@ -2,13 +2,16 @@ package ModelDominio;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Agendador extends Usuario {
     private Agendamento agendamento;
-    ArrayList<Agendamento> agendamentos;
+    private List<Agendamento> agendamentos;
+    private List<Agendador> usuarios;
     public Agendador(String nome, String senha, String login, boolean statusUsuario) {
         super(nome, senha, login, statusUsuario);
-        agendamentos = new ArrayList<>();
+        agendamentos = new ArrayList<Agendamento>();
+        usuarios = new ArrayList<Agendador>();
     }
     public boolean login(String login, String senha){ // verificando login
         boolean x = false;
@@ -44,5 +47,8 @@ public class Agendador extends Usuario {
         /*this.setSala(sala);
         this.setdataHoraInicial(dataHoraInicial);
         this.setdataHoraFinal(dataHoraFinal);*/
+    }
+    public void cadastrar(Agendador user){
+        usuarios.add(user);
     }
 }

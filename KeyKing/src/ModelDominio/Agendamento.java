@@ -1,10 +1,7 @@
 package ModelDominio;
 
 import java.text.DateFormat;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 
 public class Agendamento {
     private Agendador agendador; //relacionamento - obrigado ter um agendador no agendamento
@@ -15,7 +12,6 @@ public class Agendamento {
     private DateFormat dataHoraPego;
     private DateFormat dataHoraEntregue;
     private String observacoes;
-    private ArrayList<Agendamento> agendamentos;
 
     public Agendamento(Sala sala,DateFormat dataHoraRegistro, DateFormat dataHoraEntregue, DateFormat dataHoraPego, Agendador agendador, Periodo periodo){
         this.setSala(sala);

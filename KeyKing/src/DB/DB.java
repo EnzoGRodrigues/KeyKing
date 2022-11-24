@@ -20,11 +20,9 @@ public class DB {
 
     public static void criaAdministrador(){
         Administrador adm;
-        adm = new Administrador("Sam","123","sam_spn", true);
+        adm = new Administrador("Samuel","123","sam_spn", true);
         administrador.add(adm);
         adm = new Administrador("Gabriel","456","gabriel_ang", true);
-        administrador.add(adm);
-        adm = new Administrador("Ezequiel","789","ezequiel_ea", true);
         administrador.add(adm);
     }
     public static void criaCoordenador(){
