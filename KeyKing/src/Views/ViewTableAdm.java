@@ -6,21 +6,18 @@ import java.util.List;
 import Util.Keyboard;
 
 public class ViewTableAdm extends View{
-    public static enum OpcoesViewAdm{VAZIO, LISTAR, ADICIONAR, ADICIONARCO}
     private List<Administrador>administradores;
 
     public ViewTableAdm(List<Administrador> administradores) {
         this.administradores = administradores;
     }
-    public OpcoesViewAdm menuPrincipal(){
-        OpcoesViewAdm op = OpcoesViewAdm.VAZIO;
+    public int menuPrincipal(){
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar administradores");
         System.out.println("2 - Adicionar administrador");
         System.out.println("3 - Adicionar coordenador");
         int i = Keyboard.leInteiro("Escolha uma opção: ");
-        op = OpcoesViewAdm.values()[i];
-        return op;
+        return i;
     }//menu principal do administrador
 
     public void printAdm(){

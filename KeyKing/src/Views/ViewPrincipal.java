@@ -4,9 +4,9 @@ package Views;
 import Util.Keyboard;
 
 public class ViewPrincipal extends View{
+    public ViewPrincipal(){
 
-    public static enum OpcoesViewPrincipal{VAZIO, ADMINISTRADOR, COORDENADOR, AGENDADOR};
-
+    }
     public OpcoesViewPrincipal menuPrincipal(){
         OpcoesViewPrincipal op = OpcoesViewPrincipal.VAZIO;
         System.out.println("0 - Sair");
@@ -16,5 +16,13 @@ public class ViewPrincipal extends View{
         int i = Keyboard.leInteiro("Escolha uma opção: ");
         op = ViewPrincipal.OpcoesViewPrincipal.values()[i];
         return op;
+    }
+    public static enum OpcoesViewPrincipal{
+        VAZIO,
+        ADMINISTRADOR,
+        COORDENADOR,
+        AGENDADOR;
+        private OpcoesViewPrincipal(){
+        }
     }
 }

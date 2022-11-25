@@ -14,24 +14,24 @@ public class CtAdm {
         viewTableAdm = new ViewTableAdm(DB.administrador);
     }
 
-    public void menuPrincipalAdm(){
-        ViewTableAdm.OpcoesViewAdm op;
-        do{
-            op = viewTableAdm.menuPrincipal();
-            switch (op){
-                case LISTAR:
+    public void menuPrincipalAdm() {
+        int i;
+        do {
+            i = viewTableAdm.menuPrincipal();
+            switch (i) {
+                case 1:
                     listar();
                     break;
-                case ADICIONAR:
+                case 2:
                     adicionarAdministrador();
                     break;
-                case ADICIONARCO:
+                case 3:
                     adicionarCoordenador();
                     break;
                 default:
                     break;
             }
-        }while (op != ViewTableAdm.OpcoesViewAdm.VAZIO);
+        } while (i == 0);
     }
     private void listar(){
         viewTableAdm.printAdm();

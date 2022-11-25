@@ -4,8 +4,9 @@ import DB.DB;
 import ModelDominio.Administrador;
 import ModelDominio.Agendador;
 import ModelDominio.Coordenador;
-import Views.ViewTableAdm;
-import Views.ViewTableCoordenador;
+import Views.*;
+
+import java.util.ArrayList;
 
 public class Teste1 {
         public static void main(String[] args) {
@@ -31,19 +32,22 @@ public class Teste1 {
             c = new Coordenador("Rodrigo", "777", "rodri_jr");
             c.cadastrarCoordenador();
 
-            /*Agendador usuario;
+            Agendador usuario;
             usuario = new Agendador("Sandro", "789", "s_andro");
-            usuario.cadastrar(usuario);
+            usuario.cadastrar();
             usuario = new Agendador("Silva", "369", "s_ilva");
-            usuario.cadastrar(usuario);
+            usuario.cadastrar();
             usuario = new Agendador("Tales", "951", "tl_es");
-            usuario.cadastrar(usuario);
-*/
+            usuario.cadastrar();
+
             ViewTableAdm viewTableAdm = new ViewTableAdm(DB.administrador);
-            viewTableAdm.printAdm();
+            viewTableAdm.printAdm(); //funcao q lista administradores
 
             ViewTableCoordenador viewTableCoordenador = new ViewTableCoordenador((DB.coordenador));
-            viewTableCoordenador.printCoordenadores();
+            viewTableCoordenador.printCoordenadores(); //funcao q lista coordenadores
+
+            ViewTableAgendador viewTableAgendador = new ViewTableAgendador(DB.agendador);
+            viewTableAgendador.printAgendador();//funcao q lista usuarios
 
             System.out.println("------> Testes que não devem passar <------");
             try {
