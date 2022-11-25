@@ -1,13 +1,15 @@
 package ModelDominio;
 
+import DB.DB;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Administrador extends Usuario{
     private List<Coordenador>coordenadores;
     private List<Administrador>administradores;
-    public Administrador(String nome, String senha, String login, boolean statusUsuario){
-        super (nome, senha, login, statusUsuario);
+    public Administrador(String nome, String senha, String login){
+        super (nome, senha, login);
         coordenadores = new ArrayList<Coordenador>();
         administradores = new ArrayList<Administrador>();
     }
@@ -26,13 +28,14 @@ public class Administrador extends Usuario{
         System.out.println("Logout realizado.");
 
     }
-    public void cadastrarCoordenador(Coordenador c){
-        coordenadores.add(c);
-        /*this.setNome(nome);
-        this.setSenha(senha);
-        this.setLogin(login);*/
+    public void cadastrarCoordenador(){
+        Coordenador c;
+        c = new Coordenador(getNome(), getSenha(), getLogin());
+        DB.coordenador.add(c);
     }
-    public void cadastrarAdm(Administrador administrador){
-        administradores.add(administrador);
+    public void cadastrarAdm(){
+        Administrador adm;
+        adm = new Administrador(getNome(), getSenha(), getLogin());
+        DB.administrador.add(adm);
     }
 }

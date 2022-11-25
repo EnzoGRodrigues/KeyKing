@@ -1,13 +1,15 @@
 package ModelDominio;
 
+import DB.DB;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Coordenador extends Usuario{
     private Sala sala;
     private List<Sala>ListSalas;
-    public Coordenador(String nome, String senha, String login, boolean statusUsuario) {
-        super(nome, senha, login, statusUsuario);
+    public Coordenador(String nome, String senha, String login) {
+        super(nome, senha, login);
         ListSalas = new ArrayList<Sala>();
     }
     public boolean login(String login, String senha){
@@ -36,6 +38,11 @@ public class Coordenador extends Usuario{
         //puxa o valor reprovado do enum Status
         Agendamento teste = agendamento;
         teste.setStatus(Status.REPROVADO);
+    }
+    public void cadastrarCoordenador(){
+        Coordenador c;
+        c = new Coordenador(getNome(), getSenha(), getLogin());
+        DB.coordenador.add(c);
     }
 
 }

@@ -1,8 +1,8 @@
 package ModelDominio;
 
 public class Aluno extends Agendador{
-    public Aluno(String nome, String senha, String login, boolean statusUsuario) {
-        super(nome, senha, login, statusUsuario);
+    public Aluno(String nome, String senha, String login) {
+        super(nome, senha, login);
     }
     public boolean login(String login, String senha){ // verificando login
         boolean x = false;

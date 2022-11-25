@@ -4,27 +4,15 @@ public class Usuario {
     private String nome;
     private String senha;
     private String login;
-    private boolean status;
-    public Usuario(String nome, String senha, String login, boolean statusUsuario){
+    public Usuario(String nome, String senha, String login){
         this.setNome(nome);
         this.setSenha(senha);
         this.setLogin(login);
-        this.statusUsuario(statusUsuario);
-    }
-
-    private void statusUsuario(boolean statusUsuario) {
-        this.status = status;
     }
 
     public String getNome(){
         return nome;
     }
-
-    public boolean getStatusUsuario() {
-        return status;
-    }
-    
-
     public String getSenha() {
         return senha;
     }
