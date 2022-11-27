@@ -1,6 +1,7 @@
 package ModelDominio;
 
 import java.text.DateFormat;
+import java.util.Date;
 
 
 public class Agendamento {
@@ -8,33 +9,37 @@ public class Agendamento {
     private Periodo periodoAgendado; //relacionaneto - obrigado ter um periodo no agendamento
     private Sala sala;
     private Status status;
-    private DateFormat dataHoraRegistro;
-    private DateFormat dataHoraPego;
-    private DateFormat dataHoraEntregue;
+    private DateFormat dataRegistro;
+    private DateFormat dataPego;
+    private DateFormat dataEntregue;
     private String observacoes;
 
-    public Agendamento(Sala sala,DateFormat dataHoraRegistro, DateFormat dataHoraEntregue, DateFormat dataHoraPego, Agendador agendador, Periodo periodo){
+    public Agendamento(Sala sala, DateFormat dataRegistro, DateFormat dataEntregue, DateFormat dataPego, Agendador agendador, Periodo periodo){
         this.setSala(sala);
-        this.setDataHoraEntregue(dataHoraEntregue);
-        this.setDataHoraPego(dataHoraPego);
+        this.setDataEntregue(dataEntregue);
+        this.setDataPego(dataPego);
         this.setAgendador(agendador);
         this.setPeriodoAgendado(periodo);
-        this.setDataHoraRegistro(dataHoraRegistro);
+        this.setDataRegistro(dataRegistro);
     }
+
+    public Agendamento(String sala, Date dateRegistro, Date datePego, Date dateEntregue, String agendador, String periodo) {
+    }
+
     public Status getStatus() {
         return status;
     }
 
-    public DateFormat getDataHoraRegistro() {
-        return dataHoraRegistro;
+    public DateFormat getDataRegistro() {
+        return dataRegistro;
     }
 
-    public DateFormat getDataHoraPego() {
-        return dataHoraPego;
+    public DateFormat getDataPego() {
+        return dataPego;
     }
 
-    public DateFormat getDataHoraEntregue() {
-        return dataHoraEntregue;
+    public DateFormat getDataEntregue() {
+        return dataEntregue;
     }
 
     public String getObservacoes() {
@@ -55,16 +60,16 @@ public class Agendamento {
         this.status = status;
     }
 
-    public void setDataHoraEntregue(DateFormat dataHoraEntregue) {
-        this.dataHoraEntregue = dataHoraEntregue;
+    public void setDataEntregue(DateFormat dataEntregue) {
+        this.dataEntregue = dataEntregue;
     }
 
-    public void setDataHoraPego(DateFormat dataHoraPego) {
-        this.dataHoraPego = dataHoraPego;
+    public void setDataPego(DateFormat dataPego) {
+        this.dataPego = dataPego;
     }
 
-    public void setDataHoraRegistro(DateFormat dataHoraRegistro) {
-        this.dataHoraRegistro = dataHoraRegistro;
+    public void setDataRegistro(DateFormat dataRegistro) {
+        this.dataRegistro = dataRegistro;
     }
 
     public void setObservacoes(String observacoes) {

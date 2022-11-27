@@ -6,7 +6,7 @@ import Util.Keyboard;
 import java.util.List;
 
 public class ViewTableAgendador {
-    public static enum OpcoesViewAgendador{VAZIO, LISTAR, ADICIONAR}
+    public static enum OpcoesViewAgendador{VAZIO, LISTAR, ADICIONAR, AGENDAMENTOS}
     private List<Agendador> agendadores;
 
     public ViewTableAgendador(List<Agendador> agendadores) {
@@ -18,6 +18,7 @@ public class ViewTableAgendador {
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar agendadores");
         System.out.println("2 - Cadastrar");
+        System.out.println("3 - Agendamentos");
         int i = Keyboard.leInteiro("Escolha uma opção: ");
         op = OpcoesViewAgendador.values()[i];
         return op;

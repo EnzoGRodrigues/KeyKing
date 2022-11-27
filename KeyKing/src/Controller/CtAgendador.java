@@ -24,6 +24,9 @@ public class CtAgendador {
                 case ADICIONAR:
                     cadastrar();
                     break;
+                case AGENDAMENTOS:
+                    agendamentos();
+                    break;
                 default:
                     break;
             }
@@ -45,5 +48,9 @@ public class CtAgendador {
 
         user = new Agendador(nome, senha, login);
         DB.agendador.add(user);
+    }
+    public void agendamentos(){
+        CtAgendamento ctAgendamento = new CtAgendamento();
+        ctAgendamento.menuPrincipal();
     }
 }
