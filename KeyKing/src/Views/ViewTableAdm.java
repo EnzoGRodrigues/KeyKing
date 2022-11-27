@@ -16,6 +16,7 @@ public class ViewTableAdm extends View{
     }
     public OpcoesViewAdm menuPrincipal(){
         OpcoesViewAdm op = OpcoesViewAdm.VAZIO;
+        System.out.println("**** MENU ADMINISTRADOR ****");
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar administradores");
         System.out.println("2 - Adicionar administrador");
@@ -33,5 +34,4 @@ public class ViewTableAdm extends View{
             viewAdm.imprimeAdm(adm.getNome(), adm.getLogin());
         }
     }//imprimte todos os adminstradores
-
 }

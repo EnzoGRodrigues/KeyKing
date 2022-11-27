@@ -1,12 +1,10 @@
 package Views;
 
 import ModelDominio.Administrador;
-import ModelDominio.Coordenador;
 import Util.Keyboard;
 
 public class ViewAdm extends View{
     private Administrador administrador;
-    private Coordenador coordenador;
 
     public ViewAdm(Administrador adm){
         administrador = adm;
@@ -23,8 +21,5 @@ public class ViewAdm extends View{
     }
     public void imprimeAdm(String nome, String login){
         System.out.printf("%s %s \n", administrador.getNome(), administrador.getLogin());
-    }
-    public void imprimeCoordenador(Coordenador c){
-        System.out.printf("%s %s \n", coordenador.getNome(),coordenador.getLogin());
     }
 }

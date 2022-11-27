@@ -5,10 +5,8 @@ import DB.DB;
 import ModelDominio.Administrador;
 import ModelDominio.Coordenador;
 import Views.ViewAdm;
-import Views.ViewCoordenador;
 import Views.ViewTableAdm;
 
-import java.util.List;
 
 public class CtAdm {
     private ViewTableAdm viewTableAdm;

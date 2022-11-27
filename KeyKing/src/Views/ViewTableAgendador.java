@@ -14,9 +14,10 @@ public class ViewTableAgendador {
     }
     public OpcoesViewAgendador menuPrincipal(){
         OpcoesViewAgendador op = OpcoesViewAgendador.VAZIO;
+        System.out.println("**** MENU AGENDADOR ****");
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar agendadores");
-        System.out.println("2 - Agendar data");
+        System.out.println("2 - Cadastrar");
         int i = Keyboard.leInteiro("Escolha uma opção: ");
         op = OpcoesViewAgendador.values()[i];
         return op;

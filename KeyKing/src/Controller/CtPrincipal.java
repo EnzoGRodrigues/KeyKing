@@ -18,9 +18,10 @@ public class CtPrincipal {
                     break;
                 case COORDENADOR:
                     this.ctCoordenador();
-                /*case AGENDADOR:
+                    break;
+                case AGENDADOR:
                     ctAgendador();
-                    break;*/
+                    break;
             }
         }while (op != OpcoesViewPrincipal.VAZIO);
     }
@@ -33,8 +34,8 @@ public class CtPrincipal {
         CtCoordenador ctCoordenador = new CtCoordenador();
         ctCoordenador.menuPrincipalC();
     }
-    /*private void ctAgendador(){
+    private void ctAgendador(){
         CtAgendador ctAgendador = new CtAgendador();
         ctAgendador.menuPrincipal();
-    }*/
+    }
 }

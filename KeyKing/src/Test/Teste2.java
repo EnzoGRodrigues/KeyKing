@@ -12,6 +12,8 @@ public class Teste2 {
 
         DB.criaCoordenador();
         DB.criaAdministrador();
+        DB.criarAgendador();
+        DB.criaSalas();
         //opcao 1 visualiza administradores que existem no banco
         CtPrincipal ctPrincipal = new CtPrincipal();
         ctPrincipal.menuPrincipal();

@@ -1,7 +1,6 @@
 package Controller;
 
 import DB.DB;
-import ModelDominio.Coordenador;
 import ModelDominio.Sala;
 import Views.ViewCoordenador;
 import Views.ViewTableCoordenador;
@@ -21,11 +20,11 @@ public class CtCoordenador {
                 case LISTAR_CO:
                     listar();
                     break;
-                case ADICIONAR_SALAS:
+                /*case ADICIONAR_SALAS:
                     adicionarSalas();
-                    break;
-                case LISTAR_SALAS:
-
+                    break;*/
+                case SALAS:
+                    salas();
                     break;
                 default:
                     break;
@@ -51,9 +50,8 @@ public class CtCoordenador {
         s = new Sala(nomeSala, predio, andar, localizacao, DB.coordenador.get(0));
         DB.salas.add(s);
     }
-    public void imprimiSalas(){
-        System.out.println("------ > Coordenadores < ------");
-        System.out.printf("%s %s %s %s \n", "Nome", "Predio", "Andar", "Lolicazacao");
-        DB.salas.listIterator();
+    public void salas(){
+        CtSala ctSala = new CtSala();
+        ctSala.menuPrincipal();
     }
 }
