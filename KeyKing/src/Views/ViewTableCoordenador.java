@@ -1,6 +1,7 @@
 package Views;
 
 import Controller.CtAdm;
+import DB.DB;
 import ModelDominio.Coordenador;
 import Util.Keyboard;
 import ModelDominio.Sala;
@@ -20,7 +21,7 @@ public class ViewTableCoordenador extends View{
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar coordenadores");
         System.out.println("2 - Listar Salas");
-        System.out.println("2 - Adicionar Salas");
+        System.out.println("3 - Adicionar Salas");
         int i = Keyboard.leInteiro("Escolha uma opção: ");
         op = ViewTableCoordenador.OpcoesViewCoordenador.values()[i];
         return op;
@@ -28,15 +29,14 @@ public class ViewTableCoordenador extends View{
 
     public void printCoordenadores(){
         System.out.println("------ > Coordenadores < ------");
-        DB.DB.criaCoordenador();
+        DB.coordenador.listIterator();
 
         }
     }//imprimte todos os coordenadores
-    public void printSalas(){
+    /*public void printSalas(){
         System.out.println("------ > Salas < ------");
         System.out.printf("%s %s %s %s", "Nome", "Predio", "Andar", "Localizacao");
         for (Sala s = salas){
             ViewCoordenador viewCoordenador = new ViewCoordenador(s);
         }
-    }
-}
+    }*/

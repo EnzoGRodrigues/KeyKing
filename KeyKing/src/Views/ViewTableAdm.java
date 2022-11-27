@@ -33,10 +33,5 @@ public class ViewTableAdm extends View{
             viewAdm.imprimeAdm(adm.getNome(), adm.getLogin());
         }
     }//imprimte todos os adminstradores
-    public void printCoordenador(){
-        System.out.println("------ > Coordenadores < ------");
-        System.out.printf("%s %s \n", "Nome", "Login");
-        for (Coordenador c =)
-    }
 
 }

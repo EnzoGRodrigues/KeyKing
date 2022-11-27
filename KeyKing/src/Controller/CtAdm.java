@@ -69,10 +69,7 @@ public class CtAdm {
     public void listarCoordenador(){
         System.out.println("------ > Coordenadores < ------");
         System.out.printf("%s %s \n", "Nome", "Login");
-        for (Coordenador c:coordenador){
-            ViewCoordenador viewCoordenador = new ViewCoordenador(c);
-            System.out.printf("%s %s \n",coordenador.getNome(),coordenador.getLogin());
 
         }
-    }
 }
+

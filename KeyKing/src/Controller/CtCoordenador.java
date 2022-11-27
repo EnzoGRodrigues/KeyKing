@@ -25,7 +25,7 @@ public class CtCoordenador {
                     adicionarSalas();
                     break;
                 case LISTAR_SALAS:
-                    logar();
+
                     break;
                 default:
                     break;
@@ -52,6 +52,8 @@ public class CtCoordenador {
         DB.salas.add(s);
     }
     public void imprimiSalas(){
-        viewCoordenador.
+        System.out.println("------ > Coordenadores < ------");
+        System.out.printf("%s %s %s %s \n", "Nome", "Predio", "Andar", "Lolicazacao");
+        DB.salas.listIterator();
     }
 }
