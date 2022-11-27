@@ -1,14 +1,16 @@
 package Views;
 
-import ModelDominio.Administrador;
+import Controller.CtAdm;
 import ModelDominio.Coordenador;
 import Util.Keyboard;
+import ModelDominio.Sala;
 
 import java.util.List;
 
 public class ViewTableCoordenador extends View{
-    public static enum OpcoesViewCoordenador{VAZIO, LISTAR, LOGAR, ADICIONAR_SALAS}
+    public static enum OpcoesViewCoordenador{VAZIO, LISTAR_CO, LISTAR_SALAS,ADICIONAR_SALAS}
     private List<Coordenador>coordenadores;
+    private List<Sala>salas;
 
     public ViewTableCoordenador(List<Coordenador> coordenadores) {
         this.coordenadores = coordenadores;
@@ -17,8 +19,8 @@ public class ViewTableCoordenador extends View{
         OpcoesViewCoordenador op = OpcoesViewCoordenador.VAZIO;
         System.out.println("0 - Voltar");
         System.out.println("1 - Listar coordenadores");
-        System.out.println("2 - Adicionar salas");
-        System.out.println("3 - Adicionar salas");
+        System.out.println("2 - Listar Salas");
+        System.out.println("2 - Adicionar Salas");
         int i = Keyboard.leInteiro("Escolha uma opção: ");
         op = ViewTableCoordenador.OpcoesViewCoordenador.values()[i];
         return op;
@@ -26,10 +28,15 @@ public class ViewTableCoordenador extends View{
 
     public void printCoordenadores(){
         System.out.println("------ > Coordenadores < ------");
-        System.out.printf("%s %s \n", "Nome", "Login");
-        for (Coordenador c: coordenadores){
-            ViewCoordenador viewCoordenador = new ViewCoordenador(c);
-            viewCoordenador.imprimeCoordenador(c.getNome(), c.getLogin());
+        DB.DB.criaCoordenador();
+
         }
     }//imprimte todos os coordenadores
+    public void printSalas(){
+        System.out.println("------ > Salas < ------");
+        System.out.printf("%s %s %s %s", "Nome", "Predio", "Andar", "Localizacao");
+        for (Sala s = salas){
+            ViewCoordenador viewCoordenador = new ViewCoordenador(s);
+        }
+    }
 }

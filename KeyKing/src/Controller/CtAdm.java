@@ -5,38 +5,43 @@ import DB.DB;
 import ModelDominio.Administrador;
 import ModelDominio.Coordenador;
 import Views.ViewAdm;
+import Views.ViewCoordenador;
 import Views.ViewTableAdm;
 
 public class CtAdm {
     private ViewTableAdm viewTableAdm;
+    Coordenador coordenador;
 
     public CtAdm(){
         viewTableAdm = new ViewTableAdm(DB.administrador);
     }
 
     public void menuPrincipalAdm() {
-        int i;
+        ViewTableAdm.OpcoesViewAdm op;
         do {
-            i = viewTableAdm.menuPrincipal();
-            switch (i) {
-                case 1:
-                    listar();
+            op = viewTableAdm.menuPrincipal();
+            switch (op) {
+                case LISTAR_ADM:
+                    listarAdm();
                     break;
-                case 2:
+                case LISTAR_CO:
+                    listarCoordenador();
+                    break;
+                case ADICIONARADM:
                     adicionarAdministrador();
                     break;
-                case 3:
+                case ADCIONARCO:
                     adicionarCoordenador();
                     break;
                 default:
                     break;
             }
-        } while (i == 0);
+        } while (op != ViewTableAdm.OpcoesViewAdm.VAZIO);
     }
-    private void listar(){
+    public void listarAdm(){
         viewTableAdm.printAdm();
     }
-    private void adicionarAdministrador(){
+    public void adicionarAdministrador(){
         String nome;
         String senha;
         String login;
@@ -49,17 +54,25 @@ public class CtAdm {
         adm = new Administrador(nome, senha, login);
         DB.administrador.add(adm);
     }//adiciona administradores
-    private void adicionarCoordenador(){
+    public void adicionarCoordenador(){
         String nome;
         String senha;
         String login;
-        Coordenador c;
         ViewAdm viewAdm = new ViewAdm(null);
         nome = viewAdm.leNome();
         senha = viewAdm.leSenha();
         login = viewAdm.leLogin();
 
-        c = new Coordenador(nome, senha, login);
-        DB.coordenador.add(c);
+        coordenador = new Coordenador(nome, senha, login);
+        DB.coordenador.add(coordenador);
+    }
+    public void listarCoordenador(){
+        System.out.println("------ > Coordenadores < ------");
+        System.out.printf("%s %s \n", "Nome", "Login");
+        for (Coordenador c:coordenador){
+            ViewCoordenador viewCoordenador = new ViewCoordenador(c);
+            System.out.printf("%s %s \n",coordenador.getNome(),coordenador.getLogin());
+
+        }
     }
 }

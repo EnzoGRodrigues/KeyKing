@@ -15,7 +15,6 @@ public class Teste2 {
 
         DB.criaCoordenador();
         DB.criaAdministrador();
-        System.out.println("USAR OPÇÃO 1");
         //opcao 1 visualiza administradores que existem no banco
         CtPrincipal ctPrincipal = new CtPrincipal();
         ctPrincipal.menuPrincipal();

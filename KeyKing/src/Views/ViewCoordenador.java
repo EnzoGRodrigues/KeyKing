@@ -12,15 +12,6 @@ public class ViewCoordenador extends View{
         coordenador = c;
     }
 
-    public String leNome(){
-        return Keyboard.leString("Digite o nome da sala: ");
-    }
-    public String leSenha(){
-        return Keyboard.leString("Digite o predio: ");
-    }
-    public String leLogin(){
-        return Keyboard.leString("Digite o andar: ");
-    }
     public void imprimeCoordenador(String nome, String login){
         System.out.printf("%s %s \n", coordenador.getNome(), coordenador.getLogin());
     }

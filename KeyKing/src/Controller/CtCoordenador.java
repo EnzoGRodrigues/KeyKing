@@ -18,13 +18,13 @@ public class CtCoordenador {
         do{
             op = viewTableCoordenador.menuPrincipal();
             switch (op){
-                case LISTAR:
+                case LISTAR_CO:
                     listar();
                     break;
                 case ADICIONAR_SALAS:
                     adicionarSalas();
                     break;
-                case LOGAR:
+                case LISTAR_SALAS:
                     logar();
                     break;
                 default:
@@ -33,10 +33,10 @@ public class CtCoordenador {
         }while (op != ViewTableCoordenador.OpcoesViewCoordenador.VAZIO);
     }
 
-    private void listar(){
+    public void listar(){
         viewTableCoordenador.printCoordenadores();
     }
-    private void adicionarSalas(){
+    public void adicionarSalas(){
         String nomeSala;
         String predio;
         String andar;
@@ -51,17 +51,7 @@ public class CtCoordenador {
         s = new Sala(nomeSala, predio, andar, localizacao, DB.coordenador.get(0));
         DB.salas.add(s);
     }
-    private void logar(){
-        String nome;
-        String senha;
-        String login;
-        Coordenador c;
-        ViewCoordenador viewCoordenador = new ViewCoordenador(null);
-        nome = viewCoordenador.leNome();
-        senha = viewCoordenador.leSenha();
-        login = viewCoordenador.leLogin();
-
-        c = new Coordenador(nome, senha, login);
-        DB.coordenador.add(c);
+    public void imprimiSalas(){
+        viewCoordenador.
     }
 }
