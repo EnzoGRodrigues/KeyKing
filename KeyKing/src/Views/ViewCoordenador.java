@@ -12,8 +12,8 @@ public class ViewCoordenador extends View{
         coordenador = c;
     }
 
-    public void imprimeCoordenador(String nome, String login){
-        System.out.printf("%s %s \n", coordenador.getNome(), coordenador.getLogin());
+    public void imprimeCoordenador(){
+        System.out.printf("%s %s\n", coordenador.getNome(), coordenador.getLogin());
     }
     public String leNomeSala(){
         return Keyboard.leString("Digite o nome da sala: ");

@@ -1,10 +1,7 @@
 package Test;
 
-import DB.DB;
-import Views.ViewPrincipal;
 import Controller.CtPrincipal;
-
-import java.util.ArrayList;
+import DB.DB;
 
 
 public class Teste2 {

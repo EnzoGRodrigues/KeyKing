@@ -8,7 +8,7 @@ import ModelDominio.Coordenador;
 import Util.Keyboard;
 
 public class ViewTableAdm extends View{
-    public static enum OpcoesViewAdm{VAZIO, LISTAR_ADM, LISTAR_CO, ADICIONARADM, ADCIONARCO}
+    public static enum OpcoesViewAdm{VAZIO, LISTAR, ADICIONARADM, ADCIONARCO}
     private List<Administrador>administradores;
 
     public ViewTableAdm(List<Administrador> administradores) {

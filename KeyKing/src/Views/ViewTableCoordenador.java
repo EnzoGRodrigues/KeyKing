@@ -29,10 +29,14 @@ public class ViewTableCoordenador extends View{
 
     public void printCoordenadores(){
         System.out.println("------ > Coordenadores < ------");
-        DB.coordenador.listIterator();
-
+        for(Coordenador c: coordenadores){
+            ViewCoordenador viewCoordenador = new ViewCoordenador(c);
+            viewCoordenador.imprimeCoordenador();
+        }
+        System.out.println("------ > Visualizando Coordenadores já existentes no banco de dados < ------");
         }
     }//imprimte todos os coordenadores
+
     /*public void printSalas(){
         System.out.println("------ > Salas < ------");
         System.out.printf("%s %s %s %s", "Nome", "Predio", "Andar", "Localizacao");

@@ -8,6 +8,8 @@ import Views.ViewAdm;
 import Views.ViewCoordenador;
 import Views.ViewTableAdm;
 
+import java.util.List;
+
 public class CtAdm {
     private ViewTableAdm viewTableAdm;
     Coordenador coordenador;
@@ -21,11 +23,8 @@ public class CtAdm {
         do {
             op = viewTableAdm.menuPrincipal();
             switch (op) {
-                case LISTAR_ADM:
+                case LISTAR:
                     listarAdm();
-                    break;
-                case LISTAR_CO:
-                    listarCoordenador();
                     break;
                 case ADICIONARADM:
                     adicionarAdministrador();
@@ -66,10 +65,5 @@ public class CtAdm {
         coordenador = new Coordenador(nome, senha, login);
         DB.coordenador.add(coordenador);
     }
-    public void listarCoordenador(){
-        System.out.println("------ > Coordenadores < ------");
-        System.out.printf("%s %s \n", "Nome", "Login");
-
-        }
 }
 
