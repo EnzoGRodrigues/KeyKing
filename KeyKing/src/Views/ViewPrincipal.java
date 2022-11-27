@@ -8,7 +8,7 @@ public class ViewPrincipal extends View{
 
     }
     public OpcoesViewPrincipal menuPrincipal(){
-        OpcoesViewPrincipal op = OpcoesViewPrincipal.VAZIO;
+        OpcoesViewPrincipal op = ViewPrincipal.OpcoesViewPrincipal.VAZIO;
         System.out.println("0 - Sair");
         System.out.println("1 - Administrador");
         System.out.println("2 - Coordenador");

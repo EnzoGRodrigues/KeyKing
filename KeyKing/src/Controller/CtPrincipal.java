@@ -1,31 +1,28 @@
 package Controller;
 
 import Views.ViewPrincipal;
+import Views.ViewPrincipal.OpcoesViewPrincipal;
 
 public class CtPrincipal {
-    private ViewPrincipal viewPrincipal;
+    private ViewPrincipal viewPrincipal = new ViewPrincipal();
 
     public CtPrincipal(){
-        viewPrincipal = new ViewPrincipal();
     }
     public void menuPrincipal(){
         ViewPrincipal.OpcoesViewPrincipal op;
         do {
-            op = viewPrincipal.menuPrincipal();
+            op = this.viewPrincipal.menuPrincipal();
             switch (op){
                 case ADMINISTRADOR:
-                    ctAdm();
+                    this.ctAdm();
                     break;
                 case COORDENADOR:
-                    ctCoordenador();
-                    break;
+                    this.ctCoordenador();
                 /*case AGENDADOR:
                     ctAgendador();
                     break;*/
-                default:
-                    break;
             }
-        }while (op != ViewPrincipal.OpcoesViewPrincipal.VAZIO);
+        }while (op != OpcoesViewPrincipal.VAZIO);
     }
 
     private void ctAdm(){
